@@ -32,7 +32,7 @@ def detectface():
     gray=cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     faces = []
     faces.extend(cascade_face_front.detectMultiScale(gray, 1.1, 5,minSize=(30, 30),flags = cv2.CASCADE_SCALE_IMAGE))
-    faces.extend(cascade_face_profile.detectMultiScale(gray, 1.3, 5,minSize=(30, 30),flags = cv2.CASCADE_SCALE_IMAGE))
+    faces.extend(cascade_face_profile.detectMultiScale(gray, 1.1, 5,minSize=(30, 30),flags = cv2.CASCADE_SCALE_IMAGE))
     for (x, y, w, h) in faces:
         rect(x,y,w,h)
         
